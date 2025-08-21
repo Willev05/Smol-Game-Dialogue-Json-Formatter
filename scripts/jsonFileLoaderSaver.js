@@ -17,5 +17,6 @@ function loadJson(event) {
 
         reader.onerror = () => reject(reader.error);
         reader.readAsText(file);
+        sceneName = file.name;
     })
     }

@@ -1,2 +1,2 @@
 var jsonObject = {};
-var initiatingCharacterList = [];
+var sceneName = "";
