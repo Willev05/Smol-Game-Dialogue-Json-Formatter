@@ -1,6 +1,9 @@
 document.addEventListener("DOMContentLoaded", function(e){
     document.getElementById("loadFromFile").addEventListener("change", onFileLoad);
     document.getElementById("addInitiatingCharacterBtn").addEventListener("click", onInitiatingCharacterAdded);
+    console.log(document.getElementById("selectInitiatingCharacter"));
+    document.getElementById("selectInitiatingCharacter").addEventListener("change", onInitiatingCharacterChanged);
+
 });
 
 async function onFileLoad(event){
@@ -25,4 +28,9 @@ function onInitiatingCharacterAdded(event){
     jsonObject.Data[characterName] = dialogueBlock;
     console.log(jsonObject);
     updateInitializingCharactersList();
+}
+
+function onInitiatingCharacterChanged(event){
+    selectedInitialCharacter = document.getElementById("selectInitiatingCharacter").value;
+    updateCharactersList();
 }
