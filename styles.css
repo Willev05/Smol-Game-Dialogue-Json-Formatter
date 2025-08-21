@@ -69,6 +69,10 @@ input::placeholder{
     margin: 0px 5px 0px 5px;
 }
 
+#saveLoadControls > p {
+    font-size: 20px;
+}
+
 #characterKeyContainer {
     background-color: rgb(53, 53, 53);
     width: 30%;
@@ -83,12 +87,12 @@ input::placeholder{
     float: left;
 }
 
-#sceneNameContainer {
-    margin: 20px 0px 0px 20px;
+#characterKeyContainer label, #characterKeyContainer p {
+    font-size: 20px;
 }
 
-#characterKeyContainer label {
-    font-size: 20px;
+#selectInitiatingCharacter {
+    width: 90%;
 }
 
 .centerToParent {
@@ -99,4 +103,8 @@ input::placeholder{
 
 .padTop {
     padding: 20px 0px 0px 0px;
+}
+
+.marginLeftTop {
+    margin: 20px 0px 0px 20px;
 }

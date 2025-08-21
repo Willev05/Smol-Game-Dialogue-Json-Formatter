@@ -1,0 +1,2 @@
+var jsonObject = {};
+var initiatingCharacterList = [];

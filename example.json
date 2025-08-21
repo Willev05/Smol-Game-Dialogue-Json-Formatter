@@ -1,0 +1,24 @@
+{
+    "Version": 1,
+    "Data": {
+        "TestNPC": {
+            "Characters": [
+                {"RootNodeName": "TestNPC", "Name" : "Test NPC", "Expression": "Neutral"},
+                {"RootNodeName": "MainCharacter", "Name": "Main Character", "Expression": "Neutral"}
+            ],
+            "Dialogues":
+            {
+                "initial": [
+                    {"CharacterIndex": 0, "Text": "Well hello there!"},
+                    {"CharacterIndex": 1, "Text": "Hello"},
+                    {"CharacterIndex": 0, "Text": "Bye"}
+                ],
+                "Already interacted" : [
+                    {"CharacterIndex": 0, "Text": "Welcome back!"},
+                    {"CharacterIndex": 1, "Text": "Yeah..."},
+                    {"CharacterIndex": 0, "Text": "See you"}
+                ]
+            }
+        }
+    }
+}
