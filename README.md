@@ -1,6 +1,8 @@
 # Smol Game Dialogue Editor
 A dialogue editor for my project smol game, written in javascript. 
-The user interface is not a priority for now, and probably wont ever be.
+The user interface is not a priority for now, and probably wont ever be.\
+
+Access online [here](https://willev05.github.io/Smol-Game-Dialogue-Json-Formatter/).
 
 ## How to use this tool
 Simply import a json dialogue file. If an older file format version was imported, the program will update it automatically. 
