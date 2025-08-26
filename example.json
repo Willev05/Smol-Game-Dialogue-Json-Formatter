@@ -1,55 +1,99 @@
 {
     "Version": 1,
     "Data": {
-        "TestNPC": {
-            "Characters": [
-                {"RootNodeName": "TestNPC", "Name" : "Test NPC", "Expression": "Neutral"},
-                {"RootNodeName": "MainCharacter", "Name": "Main Character", "Expression": "Neutral"}
-            ],
-            "Dialogues": [
-                {
-                    "Choice": -1,
-                    "Lines": [
-                        {"CharacterIndex": 0, "Text": "Well hello there!"},
-                        {"CharacterIndex": 1, "Text": "Hello cuh"},
-                        {"CharacterIndex": 0, "Text": "No way ts works 🥀"}
-                    ]
-                    
-                }
-            ],
-            "Choices": [
-                
-            ]
-        },
         "TestNPCProgressive": {
             "Characters": [
                 {"RootNodeName": "TestNPC", "Name" : "Test NPC", "Expression": "Neutral"},
                 {"RootNodeName": "MainCharacter", "Name": "Main Character", "Expression": "Neutral"}
             ],
-            "Dialogues":[
-                {
-                    "Choice": 0,
+            "Dialogues": {
+                "0": {
+                    "Choice": [
+                        {"Text": "I do not like you", "Destination": 100},
+                        {"Text": "I like you :3", "Destination": 101}
+                    ],
                     "Lines": [
                         {"CharacterIndex": 0, "Text": "Hi there."},
-                        {"CharacterIndex": 1, "Text": "Hi, I go now."},
-                        {"CharacterIndex": 0, "Text": "Uh ok."}
+                        {"CharacterIndex": 1, "Text": "Hi."},
+                        {"CharacterIndex": 0, "Text": "What do you think of me?"}
                     ]
                 },
-                {
-                    "Choice": -1,
+                "1": {
+                    "Choice": [
+                        {"Text": "I do not like you", "Destination": 100},
+                        {"Text": "I like you :3", "Destination": 101}
+                    ],
                     "Lines": [
                         {"CharacterIndex": 0, "Text": "Hi again sir."},
                         {"CharacterIndex": 1, "Text": "Hi, I see you remember me."},
-                        {"CharacterIndex": 0, "Text": "Yes, now bye."}
+                        {"CharacterIndex": 0, "Text": "Yes, now do you still think the same of me?"}
+                    ]
+                },
+                "100": {
+                    "Choices": [
+                        {"Text": "Yeah... Sorry", "Destination": -1}
+                    ],
+                    "Lines": [
+                        {"CharacterIndex": 0, "Text": "Oh :("}
+                    ]
+                },
+                "101": {
+                    "Choices": [
+
+                    ],
+                    "Lines": [
+                        {"CharacterIndex": 0, "Text": "Yay :3"}
                     ]
                 }
+            }
+        },
+        "TestNPCProgressiveWithImpact": {
+            "Characters": [
+                {"RootNodeName": "TestNPC", "Name" : "Test NPC", "Expression": "Neutral"},
+                {"RootNodeName": "MainCharacter", "Name": "Main Character", "Expression": "Neutral"}
             ],
-            "Choices": [
-                [
-                    "I do not like you",
-                    "I like you :3"
-                ]
-            ]
+            "Dialogues":{
+                "0": {
+                    "Choice": [
+                        {"Text": "I do not like you", "Destination": 100},
+                        {"Text": "I like you :3", "Destination": 101}
+                    ],
+                    "Lines": [
+                        {"CharacterIndex": 0, "Text": "Hi there."},
+                        {"CharacterIndex": 1, "Text": "Hi."},
+                        {"CharacterIndex": 0, "Text": "What do you think of me?"}
+                    ]
+                },
+                "1": {
+                    "Choice": [
+                        {"Text": "I do not like you", "Destination": 100},
+                        {"Text": "I like you :3", "Destination": 101}
+                    ],
+                    "Lines": [
+                        {"CharacterIndex": 0, "Text": "Hi again sir."},
+                        {"CharacterIndex": 1, "Text": "Hi, I see you remember me."},
+                        {"CharacterIndex": 0, "Text": "Yes, now do you still think the same of me?"}
+                    ]
+                },
+                "100": {
+                    "Choices": [
+                        {"Text": "Yeah... Sorry", "Destination": -1},
+                        {"Text": "I mean it", "Destination": -1},
+                        {"Text": "I m sorry, I meant I like you", "Destination": 101}
+                    ],
+                    "Lines": [
+                        {"CharacterIndex": 0, "Text": "Oh :("}
+                    ]
+                },
+                "101": {
+                    "Choices": [
+
+                    ],
+                    "Lines": [
+                        {"CharacterIndex": 0, "Text": "Yay :3"}
+                    ]
+                }
+            }
         }
     }
 }
