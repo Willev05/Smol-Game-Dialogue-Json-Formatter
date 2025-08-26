@@ -6,19 +6,50 @@
                 {"RootNodeName": "TestNPC", "Name" : "Test NPC", "Expression": "Neutral"},
                 {"RootNodeName": "MainCharacter", "Name": "Main Character", "Expression": "Neutral"}
             ],
-            "Dialogues":
-            {
-                "initial": [
-                    {"CharacterIndex": 0, "Text": "Well hello there!"},
-                    {"CharacterIndex": 1, "Text": "Hello"},
-                    {"CharacterIndex": 0, "Text": "Bye"}
-                ],
-                "Already interacted" : [
-                    {"CharacterIndex": 0, "Text": "Welcome back!"},
-                    {"CharacterIndex": 1, "Text": "Yeah..."},
-                    {"CharacterIndex": 0, "Text": "See you"}
+            "Dialogues": [
+                {
+                    "Choice": -1,
+                    "Lines": [
+                        {"CharacterIndex": 0, "Text": "Well hello there!"},
+                        {"CharacterIndex": 1, "Text": "Hello cuh"},
+                        {"CharacterIndex": 0, "Text": "No way ts works 🥀"}
+                    ]
+                    
+                }
+            ],
+            "Choices": [
+                
+            ]
+        },
+        "TestNPCProgressive": {
+            "Characters": [
+                {"RootNodeName": "TestNPC", "Name" : "Test NPC", "Expression": "Neutral"},
+                {"RootNodeName": "MainCharacter", "Name": "Main Character", "Expression": "Neutral"}
+            ],
+            "Dialogues":[
+                {
+                    "Choice": 0,
+                    "Lines": [
+                        {"CharacterIndex": 0, "Text": "Hi there."},
+                        {"CharacterIndex": 1, "Text": "Hi, I go now."},
+                        {"CharacterIndex": 0, "Text": "Uh ok."}
+                    ]
+                },
+                {
+                    "Choice": -1,
+                    "Lines": [
+                        {"CharacterIndex": 0, "Text": "Hi again sir."},
+                        {"CharacterIndex": 1, "Text": "Hi, I see you remember me."},
+                        {"CharacterIndex": 0, "Text": "Yes, now bye."}
+                    ]
+                }
+            ],
+            "Choices": [
+                [
+                    "I do not like you",
+                    "I like you :3"
                 ]
-            }
+            ]
         }
     }
 }
