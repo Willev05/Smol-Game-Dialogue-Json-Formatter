@@ -31,7 +31,8 @@
                 },
                 "100": {
                     "Choices": [
-                        {"Text": "Yeah... Sorry", "Destination": -1}
+                        {"Text": "Yeah... Sorry", "Destination": -1},
+                        {"Text": "I m sorry, I meant I like you", "Destination": 101}
                     ],
                     "Lines": [
                         {"CharacterIndex": 0, "Text": "Oh :("}
@@ -91,6 +92,15 @@
                     ],
                     "Lines": [
                         {"CharacterIndex": 0, "Text": "Yay :3"}
+                    ]
+                },
+                "102": {
+                    "Choices": [
+                        {"Text": "I mean it", "Destination": -1},
+                        {"Text": "I m sorry, I meant I like you", "Destination": 101}
+                    ],
+                    "Lines": [
+                        {"CharacterIndex": 0, "Text": "Are you still mean?"}
                     ]
                 }
             }
