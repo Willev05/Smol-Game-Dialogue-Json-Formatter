@@ -8,7 +8,7 @@
             ],
             "Dialogues": {
                 "0": {
-                    "Choice": [
+                    "Choices": [
                         {"Text": "I do not like you", "Destination": 100},
                         {"Text": "I like you :3", "Destination": 101}
                     ],
@@ -19,7 +19,7 @@
                     ]
                 },
                 "1": {
-                    "Choice": [
+                    "Choices": [
                         {"Text": "I do not like you", "Destination": 100},
                         {"Text": "I like you :3", "Destination": 101}
                     ],

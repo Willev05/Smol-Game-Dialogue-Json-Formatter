@@ -1,9 +1,8 @@
 document.addEventListener("DOMContentLoaded", function(e){
     document.getElementById("loadFromFile").addEventListener("change", onFileLoad);
     document.getElementById("addInitiatingCharacterBtn").addEventListener("click", onInitiatingCharacterAdded);
-    console.log(document.getElementById("selectInitiatingCharacter"));
     document.getElementById("selectInitiatingCharacter").addEventListener("change", onInitiatingCharacterChanged);
-
+    document.getElementById("addDialogueCharacterBtn").addEventListener("click", onDialogueCharacterAdded);
 });
 
 async function onFileLoad(event){
@@ -20,17 +19,33 @@ function onInitiatingCharacterAdded(event){
         return;
     }
 
-    let dialogueBlock = {
+    let initiatingCharacterDialogue = {
         Characters: [],
         Dialogues: {}
     }
 
-    jsonObject.Data[characterName] = dialogueBlock;
+    jsonObject.Data[characterName] = initiatingCharacterDialogue;
     console.log(jsonObject);
     updateInitializingCharactersList();
 }
 
 function onInitiatingCharacterChanged(event){
     selectedInitialCharacter = document.getElementById("selectInitiatingCharacter").value;
+    updateCharactersList();
+}
+
+function onDialogueCharacterAdded(event){
+    let characterName = document.getElementById("characterCreatorNameInBox").value;
+    let characterExpression = document.getElementById("characterCreatorExpressionInBox").value;
+    let characterRootNodeName = document.getElementById("characterCreatorRootNodeNameInBox").value;
+
+    let newCharacter = {
+        RootNodeName: characterRootNodeName,
+        Name: characterName,
+        Expression: characterExpression
+    }
+
+    jsonObject.Data[selectedInitialCharacter].Characters.push(newCharacter);
+
     updateCharactersList();
 }

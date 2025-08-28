@@ -36,11 +36,22 @@
                         <button id="addInitiatingCharacterBtn">Create</button>
                     </div>
                     <div id="charactersContainer" class="marginLeftTop">
-                        <p>Dialogue Block Characters:</p>
+                        <p class="marginTop">Create New Dialogue Character: </p>
+                        <p class="marginTop">Name: </p>
+                        <input id="characterCreatorNameInBox" class="sidePanelTextIn marginTop">
+                        <p class="marginTop">Expression: </p>
+                        <input id="characterCreatorExpressionInBox" class="sidePanelTextIn marginTop">
+                        <p class="marginTop">Root Node Name (The name of their node in Godot, also texture folder name): </p>
+                        <input id="characterCreatorRootNodeNameInBox" class="sidePanelTextIn marginTop">
+                        <button id="addDialogueCharacterBtn">Create</button>
+                    </div> 
+                    <div id="charactersListContainer" class="marginLeftTop">
+                        <p>Dialogue Characters (Current Initiating Character Scope):</p>
                         <ul id="charactersList">
 
                         </ul>
                     </div>
+                        
                 </div>
                 <div id="editorContainer">
 

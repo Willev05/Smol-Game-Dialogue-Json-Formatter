@@ -78,6 +78,7 @@ input::placeholder{
     width: 30%;
     height: 100%;
     float: left;
+    overflow: auto;
 }
 
 #editorContainer {
@@ -93,6 +94,10 @@ input::placeholder{
 
 #selectInitiatingCharacter {
     width: 90%;
+}
+
+#charactersListContainer {
+    overflow: auto;
 }
 
 .centerToParent {

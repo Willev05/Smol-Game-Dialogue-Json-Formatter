@@ -21,9 +21,12 @@ function updateCharactersList(){
     let charactersList = document.getElementById("charactersList");
     charactersList.replaceChildren();
 
+    let characterIndex = 0;
+
     jsonObject.Data[selectedInitialCharacter].Characters.forEach((val) => {
         let newCharacter = document.createElement("li");
-        newCharacter.textContent = val.Name + ", " + val.Expression;
+        newCharacter.textContent = characterIndex + ": " + val.Name + ", " + val.Expression + " (" + val.RootNodeName + ")";
         charactersList.appendChild(newCharacter);
+        characterIndex++;
     });
 }
