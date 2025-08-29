@@ -34,6 +34,9 @@
                         <p class="marginTop">Create New Initiating Character: </p>
                         <input id="initialCreatorInBox" class="sidePanelTextIn marginTop">
                         <button id="addInitiatingCharacterBtn">Create</button>
+                        <p class="marginTop">Delete Existing Initiating Character: </p>
+                        <input id="initialDeleteInBox" class="sidePanelTextIn marginTop">
+                        <button id="delInitiatingCharacterBtn">Delete</button>
                     </div>
                     <div id="charactersListContainer" class="marginLeftTop">
                         <p>Dialogue Characters (Current Initiating Character Scope):</p>
@@ -50,6 +53,9 @@
                         <p class="marginTop">Root Node Name (The name of their node in Godot, also texture folder name): </p>
                         <input id="characterCreatorRootNodeNameInBox" class="sidePanelTextIn marginTop">
                         <button id="addDialogueCharacterBtn">Create</button>
+                        <p class="marginTop">Delete Existing Character (Index): </p>
+                        <input id="characterDeleteInBox" class="sidePanelTextIn marginTop">
+                        <button id="delDialogueCharacterBtn">Delete</button>
                     </div>     
                 </div>
                 <div id="dialogueBlocksContainer">
@@ -61,6 +67,9 @@
                         <p class="marginTop">Create New Dialogue Block (Numercial ID, can be any positive number, 0 is initial conversation): </p>
                         <input id="blockCreatorInBox" class="sidePanelTextIn marginTop">
                         <button id="addDialogueBlockBtn">Create</button>
+                        <p class="marginTop">Delete Dialogue Block (Numerical ID): </p>
+                        <input id="blockDeleteInBox" class="sidePanelTextIn marginTop">
+                        <button id="delDialogueBlockBtn">Delete</button>
                     </div>
                     <div id="choicesContainer" class="marginLeftTop">
                         <p>Dialogue Block Choices (4 max, -1 for destination means conversation end):</p>
@@ -74,6 +83,9 @@
                         <p class="marginTop">Destination: </p>
                         <input id="choiceCreatorDestinationInBox" class="sidePanelTextIn marginTop">
                         <button id="addDialogueChoiceBtn">Create</button>
+                        <p class="marginTop">Delete Dialogue Choice (Index): </p>
+                        <input id="choiceDeleteInBox" class="sidePanelTextIn marginTop">
+                        <button id="delDialogueChoiceBtn">Delete</button>
                     </div>
                 </div>
                 <div id="editorContainer">

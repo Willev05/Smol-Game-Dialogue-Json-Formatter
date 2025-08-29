@@ -15,12 +15,18 @@ function updateInitializingCharactersList(){
         newChoice.text = val;
         selectionInput.appendChild(newChoice);
     });
+
+    if (selectedInitialCharacter != "")
+    {
+        selectionInput.value = selectedInitialCharacter;
+    }
 }
 
 function updateCharactersList(){
     let charactersList = document.getElementById("charactersList");
     charactersList.replaceChildren();
 
+    if (selectedInitialCharacter == "") return;
     let characterIndex = 0;
 
     jsonObject.Data[selectedInitialCharacter].Characters.forEach((val) => {
@@ -38,17 +44,26 @@ function updateDialogueBlocksList()
     pleaseSelectEntry.text = "Please Select...";
     selectionInput.replaceChildren(pleaseSelectEntry);
 
+    if (selectedInitialCharacter == "") return;
+
     Object.keys(jsonObject.Data[selectedInitialCharacter].Dialogues).forEach((val) => {
         let newChoice = document.createElement("option");
         newChoice.value = val;
         newChoice.text = val;
         selectionInput.appendChild(newChoice);
     });
+
+    if (selectedDialogueBlock != -1)
+    {
+        selectionInput.value = selectedDialogueBlock;
+    }
 }
 
 function updateChoicesList(){
     let choicesList = document.getElementById("choicesList");
     choicesList.replaceChildren();
+
+    if (selectedDialogueBlock == -1 || selectedInitialCharacter == "") return;
 
     let choiceIndex = 0;
 

@@ -4,4 +4,4 @@ var jsonObject = {
 };
 var sceneName = "";
 var selectedInitialCharacter = "";
-var selectedDialogueBlock = 0;
+var selectedDialogueBlock = -1;
