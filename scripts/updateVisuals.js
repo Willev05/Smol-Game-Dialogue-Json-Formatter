@@ -30,3 +30,32 @@ function updateCharactersList(){
         characterIndex++;
     });
 }
+
+function updateDialogueBlocksList()
+{
+    let selectionInput = document.getElementById("selectDialogueBlock");
+    let pleaseSelectEntry = document.createElement("option");
+    pleaseSelectEntry.text = "Please Select...";
+    selectionInput.replaceChildren(pleaseSelectEntry);
+
+    Object.keys(jsonObject.Data[selectedInitialCharacter].Dialogues).forEach((val) => {
+        let newChoice = document.createElement("option");
+        newChoice.value = val;
+        newChoice.text = val;
+        selectionInput.appendChild(newChoice);
+    });
+}
+
+function updateChoicesList(){
+    let choicesList = document.getElementById("choicesList");
+    choicesList.replaceChildren();
+
+    let choiceIndex = 0;
+
+    jsonObject.Data[selectedInitialCharacter].Dialogues[selectedDialogueBlock].Choices.forEach((val) => {
+        let newChoice = document.createElement("li");
+        newChoice.textContent = choiceIndex + ": " + val.Text + ", Destination: " + val.Destination;
+        choicesList.appendChild(newChoice);
+        choiceIndex++;
+    });
+}

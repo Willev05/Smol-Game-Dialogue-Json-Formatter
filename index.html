@@ -35,6 +35,12 @@
                         <input id="initialCreatorInBox" class="sidePanelTextIn marginTop">
                         <button id="addInitiatingCharacterBtn">Create</button>
                     </div>
+                    <div id="charactersListContainer" class="marginLeftTop">
+                        <p>Dialogue Characters (Current Initiating Character Scope):</p>
+                        <ul id="charactersList">
+
+                        </ul>
+                    </div>
                     <div id="charactersContainer" class="marginLeftTop">
                         <p class="marginTop">Create New Dialogue Character: </p>
                         <p class="marginTop">Name: </p>
@@ -44,14 +50,31 @@
                         <p class="marginTop">Root Node Name (The name of their node in Godot, also texture folder name): </p>
                         <input id="characterCreatorRootNodeNameInBox" class="sidePanelTextIn marginTop">
                         <button id="addDialogueCharacterBtn">Create</button>
-                    </div> 
-                    <div id="charactersListContainer" class="marginLeftTop">
-                        <p>Dialogue Characters (Current Initiating Character Scope):</p>
-                        <ul id="charactersList">
+                    </div>     
+                </div>
+                <div id="dialogueBlocksContainer">
+                    <div id="dialogueBlocks" class="marginLeftTop">
+                        <p>Dialogue Blocks (Current Initiating Character Scope):</p>
+                        <select id="selectDialogueBlock">
+                            <option value="Please select...">Please select...</option>
+                        </select>
+                        <p class="marginTop">Create New Dialogue Block (Numercial ID, can be any positive number, 0 is initial conversation): </p>
+                        <input id="blockCreatorInBox" class="sidePanelTextIn marginTop">
+                        <button id="addDialogueBlockBtn">Create</button>
+                    </div>
+                    <div id="choicesContainer" class="marginLeftTop">
+                        <p>Dialogue Block Choices (4 max, -1 for destination means conversation end):</p>
+                        <ul id="choicesList">
 
                         </ul>
+
+                        <p class="marginTop">Create New Dialogue Choice: </p>
+                        <p class="marginTop">Text: </p>
+                        <input id="choiceCreatorTextInBox" class="sidePanelTextIn marginTop">
+                        <p class="marginTop">Destination: </p>
+                        <input id="choiceCreatorDestinationInBox" class="sidePanelTextIn marginTop">
+                        <button id="addDialogueChoiceBtn">Create</button>
                     </div>
-                        
                 </div>
                 <div id="editorContainer">
 
